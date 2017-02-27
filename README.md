@@ -1,0 +1,1 @@
+# ezplatform-ee-assets
