@@ -1,0 +1,29 @@
+{
+    "name": "ezsystems/ezplatform-ee-assets",
+    "description": "External assets dependencies for StudioUIBundle",
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "Piotr Nalepa",
+            "email": "piotr.nalepa@ez.no"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "EzSystems\\PlatformEEAssetsBundle\\": ""
+        }
+    },
+    "scripts": {
+        "build": [
+            "bower install",
+            "npm install",
+            "npm run build"
+        ],
+        "post-install-cmd": [
+            "@build"
+        ],
+        "post-update-cmd": [
+            "@build"
+        ],
+    }
+}

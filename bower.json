@@ -1,0 +1,21 @@
+{
+  "name": "ez-platform-ee-assets-bundle",
+  "version": "1.0.0",
+  "homepage": "https://github.com/ezsystems/ezplatform-ee-assets",
+  "authors": [
+    "eZ Systems"
+  ],
+  "license": "GPL-2.0",
+  "private": true,
+  "ignore": [
+    "*",
+    "**/.*",
+    "Resources/public/vendors/"
+  ],
+  "dependencies": {
+    "dragsterjs": "^1.4.1",
+    "fixed-data-table": "^0.6.3",
+    "postscribe-min": "https://cdnjs.cloudflare.com/ajax/libs/postscribe/2.0.8/postscribe.min.js",
+    "react": "^15.4.2"
+  }
+}
