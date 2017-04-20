@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+    - "node"
+
+before_script:
+    - sudo ./bin/travis/setupphp.sh
+    - curl -sS https://getcomposer.org/installer | php
+    - npm install -g bower
+
+script:
+    - ./composer.phar validate
+    - ./composer.phar install
+    - bower install
+    - npm install
+    - npm run build
