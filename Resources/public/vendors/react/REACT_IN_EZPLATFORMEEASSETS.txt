@@ -1,0 +1,2 @@
+This is a customized react version.
+To decrease the size of the bundle, it does not include development-only files
