@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/ezsystems/ezplatform-ee-assets#readme",
   "dependencies": {
-    "concat": "^3.0.0",
+    "concat": "^3.0.0"
   },
   "devDependencies": {
     "concat": "^3.0.0"
