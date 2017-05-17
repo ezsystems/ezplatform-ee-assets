@@ -22,7 +22,7 @@
         ],
         "post-update-cmd": [
             "@build"
-        ],
+        ]
     },
     "extra": {
         "branch-alias": {
