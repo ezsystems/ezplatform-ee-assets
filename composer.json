@@ -2,10 +2,12 @@
     "name": "ezsystems/ezplatform-ee-assets",
     "description": "External assets dependencies for StudioUIBundle",
     "license": "GPL-2.0",
-    "authors": [{
-        "name": "eZ dev-team & eZ Community",
-        "homepage": "https://github.com/ezsystems/ezplatform-ee/contributors"
-    }],
+    "authors": [
+        {
+            "name": "eZ dev-team & eZ Community",
+            "homepage": "https://github.com/ezsystems/ezplatform-ee/contributors"
+        }
+    ],
     "autoload": {
         "psr-4": {
             "EzSystems\\PlatformEEAssetsBundle\\": ""
@@ -22,7 +24,7 @@
         ],
         "post-update-cmd": [
             "@build"
-        ],
+        ]
     },
     "extra": {
         "branch-alias": {
