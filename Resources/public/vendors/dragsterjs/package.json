@@ -1,0 +1,30 @@
+{
+  "name": "dragsterjs",
+  "version": "1.6.2",
+  "description": "Tiny vanilla JS plugin that enables drag'n'drop interactions to a user of your website",
+  "main": "dragster.js",
+  "scripts": {
+    "generate-modules": "node module-generator.js",
+    "minify": "uglifyjs dragster.js --mangle --compress --comments --output dragster.min.js",
+    "gzip": "gzip -c dragster.min.js > dragster.min.js.gz",
+    "deploy": "npm run generate-modules && npm run minify && npm run gzip"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sunpietro/dragster.git"
+  },
+  "keywords": [
+    "javascript",
+    "drag",
+    "drop"
+  ],
+  "author": "Piotr Nalepa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sunpietro/dragster/issues"
+  },
+  "homepage": "https://github.com/sunpietro/dragster",
+  "devDependencies": {
+    "uglify-js": "^2.7.3"
+  }
+}
