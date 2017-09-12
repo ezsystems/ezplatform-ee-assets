@@ -16,6 +16,6 @@
     "dragsterjs": "^1.6.2",
     "fixed-data-table": "^0.6.3",
     "postscribe-min": "https://cdnjs.cloudflare.com/ajax/libs/postscribe/2.0.8/postscribe.min.js",
-    "react": "^15.4.2"
+    "react": "0.14.2"
   }
 }
