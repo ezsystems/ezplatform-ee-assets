@@ -70,7 +70,7 @@ npm run build
 check_process "run bower"
 
 echo "# Removing unused files from Fixed Data Table"
-rm -rf "$DATATABLE_DIR/build_helpers" "$DATATABLE_DIR/dist" "$DATATABLE_DIR/docs" "$DATATABLE_DIR/examples" "$DATATABLE_DIR/site" "$DATATABLE_DIR/src" $DATATABLE_DIR/main.js $DATATABLE_DIR/webpack.config.js $DATATABLE_DIR/.babelrc $DATATABLE_DIR/.bower.json $DATATABLE_DIR/.editorconfig $DATATABLE_DIR/.gitignore $DATATABLE_DIR/.npmignore
+rm -rf "$DATATABLE_DIR/build_helpers" "$DATATABLE_DIR/docs" "$DATATABLE_DIR/examples" "$DATATABLE_DIR/site" "$DATATABLE_DIR/src" $DATATABLE_DIR/main.js $DATATABLE_DIR/webpack.config.js $DATATABLE_DIR/.babelrc $DATATABLE_DIR/.bower.json $DATATABLE_DIR/.editorconfig $DATATABLE_DIR/.gitignore $DATATABLE_DIR/.npmignore
 check_process "clean fixed-data-table"
 echo "This is a customized Fixed Data Table version." > $DATATABLE_NOTICE
 echo "To decrease the size of the bundle, it does not include the library docs," >> $DATATABLE_NOTICE
