@@ -15,9 +15,7 @@
     },
     "scripts": {
         "build": [
-            "bower install",
-            "npm install",
-            "npm run build"
+            "bower install"
         ],
         "post-install-cmd": [
             "@build"

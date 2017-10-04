@@ -1,27 +1,15 @@
 {
-  "name": "ezplatform-ee-asstets",
-  "version": "1.0.0",
-  "description": "External assets dependencies for StudioUIBundle",
-  "main": "index.js",
-  "scripts": {
-    "concat": "concat",
-    "build-fixed-datatable": "concat Resources/public/vendors/react/react.min.js Resources/public/vendors/react/react-dom.min.js Resources/public/vendors/fixed-data-table/dist/fixed-data-table.min.js -o Resources/public/vendors/fixed-data-table/fixed-data-table-with-react.js",
-    "build": "npm run build-fixed-datatable"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ezsystems/ezplatform-ee-assets.git"
-  },
-  "author": "eZ Systems",
-  "license": "GPL-2.0",
-  "bugs": {
-    "url": "https://github.com/ezsystems/ezplatform-ee-assets/issues"
-  },
-  "homepage": "https://github.com/ezsystems/ezplatform-ee-assets#readme",
-  "dependencies": {
-    "concat": "^3.0.0"
-  },
-  "devDependencies": {
-    "concat": "^3.0.0"
-  }
+    "name": "ezplatform-ee-assets",
+    "version": "1.0.0",
+    "description": "External assets dependencies for StudioUIBundle",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ezsystems/ezplatform-ee-assets.git"
+    },
+    "author": "eZ Systems",
+    "license": "GPL-2.0",
+    "bugs": {
+        "url": "https://github.com/ezsystems/ezplatform-ee-assets/issues"
+    },
+    "homepage": "https://github.com/ezsystems/ezplatform-ee-assets#readme",
 }
