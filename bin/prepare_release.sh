@@ -64,9 +64,7 @@ echo "# Removing the assets"
 check_process "clean the vendor dir $VENDOR_DIR"
 
 echo "# Bower install"
-npm install
 bower install
-npm run build
 check_process "run bower"
 
 echo "# Removing unused files from Fixed Data Table"
