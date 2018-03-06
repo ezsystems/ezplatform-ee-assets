@@ -2,6 +2,10 @@
     "name": "ezplatform-ee-assets",
     "version": "1.0.0",
     "description": "External assets dependencies for StudioUIBundle",
+    "scripts": {
+        "move-fixed-data-table-2": "cp -r node_modules/fixed-data-table-2 Resources/public/vendors/fixed-data-table-2",
+        "prepare-release": "npm run move-fixed-data-table-2"
+    },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/ezsystems/ezplatform-ee-assets.git"
@@ -11,5 +15,8 @@
     "bugs": {
         "url": "https://github.com/ezsystems/ezplatform-ee-assets/issues"
     },
-    "homepage": "https://github.com/ezsystems/ezplatform-ee-assets#readme"
+    "homepage": "https://github.com/ezsystems/ezplatform-ee-assets#readme",
+    "dependencies": {
+        "fixed-data-table-2": "^0.8.10"
+    }
 }
