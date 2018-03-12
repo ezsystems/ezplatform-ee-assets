@@ -1,0 +1,11 @@
+{
+  "name": "postscribe-min",
+  "_cacheHeaders": {
+    "Last-Modified": "Wed, 23 Nov 2016 00:17:30 GMT",
+    "Content-Type": "application/javascript; charset=utf-8"
+  },
+  "main": "index.js",
+  "_source": "https://cdnjs.cloudflare.com/ajax/libs/postscribe/2.0.8/postscribe.min.js",
+  "_target": "*",
+  "_originalSource": "https://cdnjs.cloudflare.com/ajax/libs/postscribe/2.0.8/postscribe.min.js"
+}
