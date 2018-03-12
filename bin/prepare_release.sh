@@ -39,16 +39,15 @@ check_process()
 
 check_command "git"
 check_command "bower"
+check_command "npm"
 
 VENDOR_DIR=`cat .bowerrc | grep "directory" | cut -d ':' -f 2 | sed 's/[ "]//g'`
 POSTSCRIBE_DIR="$VENDOR_DIR/postscribe-min"
 POSTSCRIBE_NOTICE="$POSTSCRIBE_DIR/POSTSCRIBE_IN_EZPLATFORMEEASSETS.txt"
 DRAGSTER_DIR="$VENDOR_DIR/dragsterjs"
 DRAGSTER_NOTICE="$DRAGSTER_DIR/DRAGSTER_IN_EZPLATFORMEEASSETS.txt"
-DATATABLE_DIR="$VENDOR_DIR/fixed-data-table"
+DATATABLE_DIR="$VENDOR_DIR/fixed-data-table-2"
 DATATABLE_NOTICE="$DATATABLE_DIR/DATATABLE_IN_EZPLATFORMEEASSETS.txt"
-REACT_DIR="$VENDOR_DIR/react"
-REACT_NOTICE="$REACT_DIR/REACT_IN_EZPLATFORMEEASSETS.txt"
 
 CURRENT_BRANCH=`git branch | grep '*' | cut -d ' ' -f 2`
 TMP_BRANCH="version_$VERSION"
@@ -67,9 +66,13 @@ echo "# Bower install"
 bower install
 check_process "run bower"
 
-echo "# Removing unused files from Fixed Data Table"
-rm -rf "$DATATABLE_DIR/build_helpers" "$DATATABLE_DIR/docs" "$DATATABLE_DIR/examples" "$DATATABLE_DIR/site" "$DATATABLE_DIR/src" $DATATABLE_DIR/main.js $DATATABLE_DIR/webpack.config.js $DATATABLE_DIR/.babelrc $DATATABLE_DIR/.bower.json $DATATABLE_DIR/.editorconfig $DATATABLE_DIR/.gitignore $DATATABLE_DIR/.npmignore
-check_process "clean fixed-data-table"
+echo "# npm install"
+npm install
+npm run prepare-release
+
+echo "# Removing unused files from Fixed Data Table 2"
+rm -rf "$DATATABLE_DIR/docs" "$DATATABLE_DIR/examples" "$DATATABLE_DIR/internal" "$DATATABLE_DIR/.tmp" "$DATATABLE_DIR/.github" $DATATABLE_DIR/main.js $DATATABLE_DIR/webpack.config-test.js $DATATABLE_DIR/testRunner.js $DATATABLE_DIR/package.json $DATATABLE_DIR/.npmignore $DATATABLE_DIR/.travis.yml
+check_process "clean fixed-data-table-2"
 echo "This is a customized Fixed Data Table version." > $DATATABLE_NOTICE
 echo "To decrease the size of the bundle, it does not include the library docs," >> $DATATABLE_NOTICE
 echo "the examples, the source files, the build helpers or any development-only files." >> $DATATABLE_NOTICE
@@ -79,12 +82,6 @@ rm -rf $DRAGSTER_DIR/.bower.json $DRAGSTER_DIR/bower.json $DRAGSTER_DIR/dragster
 check_process "clean dragsterjs"
 echo "This is a customized DragsterJS version." > $DRAGSTER_NOTICE
 echo "To decrease the size of the bundle, it does not include development-only files" >> $DRAGSTER_NOTICE
-
-echo "# Removing unused files from react"
-rm -rf $REACT_DIR/.bower.json $REACT_DIR/bower.json $REACT_DIR/react-dom-server.js $REACT_DIR/react-dom-server.min.js $REACT_DIR/react-with-addons.js $REACT_DIR/react-with-addons.min.js
-check_process "clean react"
-echo "This is a customized react version." > $REACT_NOTICE
-echo "To decrease the size of the bundle, it does not include development-only files" >> $REACT_NOTICE
 
 echo "# Creating the custom branch: $TMP_BRANCH"
 git checkout -q -b "$TMP_BRANCH" > /dev/null
